@@ -1,0 +1,49 @@
+<html>
+
+    <body>
+        <h1>Hello</h1>
+
+        <script></script>
+        <script src="https://cdn.jsdelivr.net/npm/socket.io-client@2/dist/socket.io.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script>
+            $(function () {
+                var socket = io('http://localhost:5020');//reverse proxy the localhost
+                socket.on('connect', function () { 
+                    socket.emit('connecting','user connecting')
+                });
+                window.addEventListener('mousemove', function (event) {
+                    console.log(event);
+                    var mouseObj = {
+                        clientX: event.clientX,
+                        clientY: event.clientY,
+                        movementX: event.movementX,
+                        movementY: event.movementY,
+                        offsetX: event.offsetX,
+                        offsetY: event.offsetY,
+                        pageX: event.pageX,
+                        pageY: event.pageY,
+                        screenX: event.screenX,
+                        screenY: event.screenY,
+                        target:{
+                            id:event.target.id,
+                            nodeName:event.target.nodeName
+                        },
+                        view:
+                        {
+                            host: event.view.location.host,
+                            hostname: event.view.location.hostname,
+                            href: event.view.location.href,
+                            origin: event.view.location.origin,
+                            pathname: event.view.location.pathname,
+                            port: event.view.location.port,
+                            protocol: event.view.location.protocol
+                        }
+                    }
+                    socket.emit('position', mouseObj);
+                })
+            });
+        </script>
+    </body>
+
+</html>

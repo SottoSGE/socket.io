@@ -1,0 +1,41 @@
+[{
+    "clientX": 186,
+    "clientY": 368,
+    "movementX": 0,
+    "movementY": 2,
+    "offsetX": 186,
+    "offsetY": 368,
+    "pageX": 186,
+    "pageY": 368,
+    "screenX": 1147,
+    "screenY": 448,
+    "target": {
+        "id": "",
+        "nodeName": "HTML"
+    }
+},
+{
+    "clientX": 264,
+    "clientY": 366,
+    "movementX": 1,
+    "movementY": 3,
+    "offsetX": 264,
+    "offsetY": 366,
+    "pageX": 264,
+    "pageY": 366,
+    "screenX": 1225,
+    "screenY": 446,
+    "target": {
+        "id": "",
+        "nodeName": "HTML"
+    },
+    "view": {
+        "host": "",
+        "hostname": "",
+        "href": "file:///D:/SOCKET.IO/sample.html",
+        "origin": "file://",
+        "pathname": "/D:/SOCKET.IO/sample.html",
+        "port": "",
+        "protocol": "file:"
+    }
+}]
